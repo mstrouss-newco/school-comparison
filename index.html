@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annie Wright vs Mercersburg — Deep Comparison</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --aw: #1a5c3a;
+  --aw-light: #e6f2eb;
+  --aw-mid: #2e7d50;
+  --aw-dark: #0e3d26;
+  --ma: #1c2e5e;
+  --ma-light: #e8ecf6;
+  --ma-mid: #2d47a0;
+  --ma-dark: #0f1d40;
+  --gold: #b07c1a;
+  --gold-light: #fdf3e0;
+  --ink: #18181a;
+  --muted: #6b6b70;
+  --lighter: #9a9aa0;
+  --rule: #e2dfd8;
+  --paper: #faf9f7;
+  --cream: #f4f2ed;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Outfit', sans-serif; background: var(--paper); color: var(--ink); font-size: 15px; line-height: 1.7; }
+
+/* ── MASTHEAD ── */
+.masthead {
+  background: var(--ink);
+  color: white;
+  padding: 56px 48px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--gold);
+}
+.masthead::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(26,92,58,0.18) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 50%, rgba(28,46,94,0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.masthead-eyebrow {
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); font-weight: 600; margin-bottom: 14px;
+}
+.masthead h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 56px); font-weight: 600; line-height: 1.15;
+  margin-bottom: 20px;
+}
+.masthead h1 .vs {
+  display: inline-block; font-style: italic; font-weight: 400;
+  color: rgba(255,255,255,0.4); font-size: 0.65em; margin: 0 8px;
+}
+.masthead-sub {
+  color: rgba(255,255,255,0.55); font-size: 14px; font-weight: 300;
+  max-width: 560px; margin: 0 auto 28px;
+}
+.masthead-pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.masthead-pill {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
+  padding: 5px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.6);
+}
+
+/* ── NAV BAR ── */
+.toc {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 32px;
+}
+.toc-inner { display: inline-flex; gap: 0; }
+.toc a {
+  display: inline-block; padding: 13px 18px;
+  font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500;
+  color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.toc a:hover { color: var(--ink); border-color: var(--ink); }
+
+/* ── SCHOOL HEADER BAND ── */
+.school-band {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border-bottom: 1px solid var(--rule);
+}
+.school-band-col { padding: 28px 36px; border-right: 1px solid var(--rule); }
+.school-band-col:last-child { border-right: none; }
+.school-band-col.aw { background: var(--aw-light); }
+.school-band-col.ma { background: var(--ma-light); }
+.school-chip {
+  display: inline-block; font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase;
+  font-weight: 600; padding: 3px 10px; border-radius: 3px; margin-bottom: 10px;
+}
+.aw .school-chip { background: var(--aw); color: white; }
+.ma .school-chip { background: var(--ma); color: white; }
+.school-band-col h2 {
+  font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 700; margin-bottom: 4px;
+}
+.school-band-col .location { color: var(--muted); font-size: 13px; }
+
+/* ── PHOTO GRID ── */
+.photo-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border-bottom: 1px solid var(--rule);
+}
+.photo-col { display: flex; flex-direction: column; }
+.photo-col-header {
+  padding: 16px 24px 12px;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+  border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule);
+}
+.photo-col:last-child .photo-col-header { border-right: none; }
+.aw-header { color: var(--aw); background: var(--aw-light); }
+.ma-header { color: var(--ma); background: var(--ma-light); }
+.photo-row { display: grid; grid-template-columns: 1fr 1fr; border-right: 1px solid var(--rule); }
+.photo-col:last-child .photo-row { border-right: none; }
+.photo-cell {
+  position: relative; overflow: hidden; background: #ccc;
+  border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule);
+  height: 190px;
+}
+.photo-cell:nth-child(2n) { border-right: none; }
+.photo-cell img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.5s ease;
+  background: #d0cdc8;
+}
+.photo-cell:hover img { transform: scale(1.05); }
+.photo-cell::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #e0ddd8 25%, #d0cdc8 50%, #e0ddd8 75%);
+  background-size: 200% 200%;
+  z-index: 0;
+}
+.photo-cell img { position: relative; z-index: 1; }
+.photo-cell .cap {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.72));
+  color: white; font-size: 11px; padding: 20px 12px 9px; line-height: 1.3;
+}
+
+/* ── SECTION WRAPPER ── */
+.section { border-bottom: 1px solid var(--rule); }
+.section-title-row {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 22px 36px 18px;
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+}
+.section-title-row h2 {
+  font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600;
+}
+.section-num {
+  font-size: 11px; font-weight: 600; letter-spacing: 1px; color: var(--lighter);
+}
+.winner-pill {
+  margin-left: auto; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  font-weight: 600; padding: 4px 14px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
+}
+.winner-pill::before { content: '★'; font-size: 9px; }
+.winner-pill.aw { background: var(--aw); color: white; }
+.winner-pill.ma { background: var(--ma); color: white; }
+.winner-pill.tie { background: var(--gold); color: white; }
+
+/* ── TWO-COL CONTENT ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.col-pane {
+  padding: 28px 36px; border-right: 1px solid var(--rule);
+  font-size: 14px; line-height: 1.78; color: #2a2a2a;
+}
+.col-pane:last-child { border-right: none; }
+.col-pane.aw-tint { background: rgba(26,92,58,0.028); }
+.col-pane.ma-tint { background: rgba(28,46,94,0.028); }
+.col-pane p + p { margin-top: 12px; }
+.col-pane h3 {
+  font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600;
+  margin-bottom: 10px; margin-top: 18px;
+}
+.col-pane h3:first-child { margin-top: 0; }
+
+/* ── KEY BULLETS ── */
+.key-bullets {
+  margin-top: 18px; padding-top: 18px;
+  border-top: 1px solid var(--rule);
+}
+.key-bullets-label {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  font-weight: 600; margin-bottom: 10px; color: var(--muted);
+}
+.bullet {
+  display: flex; gap: 10px; margin-bottom: 8px;
+  font-size: 13.5px; line-height: 1.5; color: #333;
+}
+.bullet-icon {
+  width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; color: white; margin-top: 2px;
+}
+.aw-icon { background: var(--aw); }
+.ma-icon { background: var(--ma); }
+
+/* ── STAT TAGS ── */
+.stat-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.stat-tag {
+  font-size: 12px; padding: 4px 12px; border-radius: 4px; font-weight: 500;
+}
+.aw-tag { background: var(--aw-light); color: var(--aw-dark); }
+.ma-tag { background: var(--ma-light); color: var(--ma-dark); }
+
+/* ── FACILITY CALLOUT ── */
+.facility-callout {
+  background: var(--cream); border-left: 3px solid;
+  padding: 14px 18px; margin: 16px 0; border-radius: 0 6px 6px 0;
+  font-size: 13.5px; line-height: 1.6;
+}
+.aw .facility-callout { border-color: var(--aw); }
+.ma .facility-callout { border-color: var(--ma); }
+.facility-callout strong { display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; margin-bottom: 5px; }
+.aw .facility-callout strong { color: var(--aw); }
+.ma .facility-callout strong { color: var(--ma); }
+
+/* ── ALUMNI SECTION ── */
+.alumni-section { border-bottom: 1px solid var(--rule); }
+.alumni-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.alumni-col {
+  padding: 28px 36px; border-right: 1px solid var(--rule);
+}
+.alumni-col:last-child { border-right: none; }
+.alumni-col-label {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+  margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule);
+}
+.aw-col-label { color: var(--aw); }
+.ma-col-label { color: var(--ma); }
+.alumni-card {
+  padding: 16px 0; border-bottom: 1px solid var(--rule);
+}
+.alumni-card:last-child { border-bottom: none; }
+.alumni-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 5px; }
+.alumni-name {
+  font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700;
+}
+.alumni-year {
+  font-size: 11px; letter-spacing: 1px; font-weight: 600;
+  padding: 2px 8px; border-radius: 3px;
+}
+.aw-year { background: var(--aw-light); color: var(--aw-dark); }
+.ma-year { background: var(--ma-light); color: var(--ma-dark); }
+.alumni-title { font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 6px; }
+.alumni-bio { font-size: 13.5px; color: #444; line-height: 1.6; }
+
+/* ── FIT SECTION ── */
+.fit-section { background: var(--ink); color: white; padding: 44px 36px; border-bottom: 1px solid var(--rule); }
+.fit-section-header { text-align: center; margin-bottom: 32px; }
+.fit-section-header .eyebrow {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600;
+  color: var(--gold); margin-bottom: 10px;
+}
+.fit-section-header h2 {
+  font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600;
+  margin-bottom: 10px;
+}
+.fit-section-header p { color: rgba(255,255,255,0.5); font-size: 14px; font-weight: 300; }
+.fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.fit-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 26px 28px;
+}
+.fit-card-label {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+  padding-bottom: 12px; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.aw .fit-card-label { color: #6dd9a0; }
+.ma .fit-card-label { color: #8aabff; }
+.fit-card h3 {
+  font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600;
+  margin-bottom: 16px; line-height: 1.3;
+}
+.fit-item {
+  display: flex; gap: 10px; margin-bottom: 10px;
+  font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.75);
+}
+.fit-dot {
+  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 7px;
+}
+.aw .fit-dot { background: #6dd9a0; }
+.ma .fit-dot { background: #8aabff; }
+.fit-card .not-right {
+  margin-top: 16px; padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.fit-card .not-right-label {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+  color: rgba(255,255,255,0.3); margin-bottom: 8px;
+}
+.fit-item.dim { color: rgba(255,255,255,0.35); }
+.fit-item.dim .fit-dot { background: rgba(255,255,255,0.2); }
+
+/* ── SCORECARD ── */
+.scorecard { padding: 36px; background: var(--white); border-bottom: 1px solid var(--rule); }
+.scorecard-header { text-align: center; margin-bottom: 24px; }
+.scorecard-header h2 {
+  font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; margin-bottom: 4px;
+}
+.scorecard-header p { font-size: 13px; color: var(--muted); }
+.score-table { width: 100%; border-collapse: collapse; }
+.score-table th {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+  padding: 8px 16px; color: var(--muted); border-bottom: 2px solid var(--rule);
+}
+.score-table td { padding: 11px 16px; font-size: 13.5px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.score-table td.category { font-weight: 500; font-size: 12px; letter-spacing: 0.5px; color: var(--muted); text-align: center; }
+.score-table td.aw-val { text-align: right; }
+.score-table td.ma-val { text-align: left; }
+.score-table tr.win-aw td.aw-val { background: var(--aw-light); color: var(--aw-dark); font-weight: 600; border-radius: 4px 0 0 4px; }
+.score-table tr.win-ma td.ma-val { background: var(--ma-light); color: var(--ma-dark); font-weight: 600; border-radius: 0 4px 4px 0; }
+.score-table tr.win-tie td.category { color: var(--gold); font-weight: 600; }
+.score-tag {
+  display: inline-block; font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 3px; margin-left: 6px; vertical-align: middle;
+}
+.win-aw .score-tag { background: var(--aw); color: white; }
+.win-ma .score-tag { background: var(--ma); color: white; }
+.win-tie .score-tag { background: var(--gold); color: white; }
+
+/* ── FOOTER ── */
+.footer { background: var(--ink); color: rgba(255,255,255,0.35); text-align: center; padding: 24px; font-size: 12px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  .school-band, .photo-grid, .two-col, .alumni-grid, .fit-grid { grid-template-columns: 1fr; }
+  .school-band-col { border-right: none; border-bottom: 1px solid var(--rule); }
+  .photo-col .photo-row { grid-template-columns: 1fr; }
+  .photo-col-header { border-right: none; }
+  .col-pane { border-right: none; border-bottom: 1px solid var(--rule); }
+  .alumni-col { border-right: none; border-bottom: 1px solid var(--rule); }
+  .score-table { font-size: 12px; }
+  .score-table td { padding: 9px 8px; }
+  .masthead { padding: 40px 24px 32px; }
+  .section-title-row, .col-pane, .alumni-col, .scorecard { padding-left: 20px; padding-right: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-eyebrow">Independent Boarding School Comparison · 2025–2026</div>
+  <h1>Annie Wright Schools <span class="vs">vs</span> Mercersburg Academy</h1>
+  <p class="masthead-sub">An in-depth look at campus, facilities, academics, culture, and student fit — with narrative analysis and category verdicts</p>
+  <div class="masthead-pills">
+    <span class="masthead-pill">Tacoma, WA · Est. 1884</span>
+    <span class="masthead-pill">Mercersburg, PA · Est. 1893</span>
+    <span class="masthead-pill">Both Grades 9–12</span>
+    <span class="masthead-pill">Both NAIS Members</span>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="#campus">Campus</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#academics">Academics</a>
+    <a href="#boarding">Boarding Life</a>
+    <a href="#athletics">Athletics</a>
+    <a href="#arts">Arts</a>
+    <a href="#financials">Cost &amp; Aid</a>
+    <a href="#alumni">Alumni</a>
+    <a href="#fit">Who's It For?</a>
+    <a href="#scorecard">Scorecard</a>
+  </div>
+</nav>
+
+<!-- SCHOOL BAND -->
+<div class="school-band">
+  <div class="school-band-col aw">
+    <span class="school-chip">Founded 1884</span>
+    <h2>Annie Wright Schools</h2>
+    <span class="location">827 N. Tacoma Ave · Tacoma, WA 98403 · IB World School</span>
+  </div>
+  <div class="school-band-col ma">
+    <span class="school-chip">Founded 1893</span>
+    <h2>Mercersburg Academy</h2>
+    <span class="location">300 East Seminary St · Mercersburg, PA 17236 · College Preparatory</span>
+  </div>
+</div>
+
+<!-- ══════════════ CAMPUS ══════════════ -->
+<section class="section" id="campus">
+  <div class="section-title-row">
+    <span class="section-num">01</span>
+    <h2>Campus &amp; Setting</h2>
+    <span class="winner-pill ma">Mercersburg wins</span>
+  </div>
+
+  <!-- PHOTO STRIP: CAMPUS -->
+  <div class="photo-grid">
+    <div class="photo-col">
+      <div class="photo-col-header aw-header">Annie Wright — Campus</div>
+      <div class="photo-row">
+        <div class="photo-cell">
+          <img src="https://mithun.com/wp-content/uploads/2023/07/1720000_N25-1.jpg"
+               alt="Annie Wright campus — new academic building exterior">
+          <div class="cap">New Boys Academic Building (2019) — Mithun Architects</div>
+        </div>
+        <div class="photo-cell">
+          <img src="https://mithun.com/wp-content/uploads/2023/07/1720000_N26-1.jpg"
+               alt="Annie Wright campus courtyard">
+          <div class="cap">Entry courtyard connecting historic main building to new wing</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-col">
+      <div class="photo-col-header ma-header">Mercersburg — Campus</div>
+      <div class="photo-row">
+        <div class="photo-cell">
+          <img src="https://www.dlrgroup.com/media/31_00000_11_N10_weblg-2140x1428.jpg"
+               alt="Mercersburg campus main building exterior">
+          <div class="cap">Mercersburg's historic campus — stone buildings and green grounds</div>
+        </div>
+        <div class="photo-cell">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mercersburg_Chapel.jpg"
+               alt="Mercersburg chapel exterior">
+          <div class="cap">Irvine Memorial Chapel — designed by Ralph Adams Cram, 1924–1926</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="col-pane aw-tint aw">
+      <h3>Urban gem on Commencement Bay</h3>
+      <p>Annie Wright occupies 10 acres in Tacoma's historic North End neighborhood, and its location is one of the things families either love immediately or find limiting. The campus sits on a bluff overlooking Commencement Bay and Puget Sound, giving students some of the most scenic views of any school in the Pacific Northwest. The historic main building — a stately red-brick structure completed in 1924 — anchors the campus and connects directly to dorms, the dining hall, classrooms, and athletic facilities. Students rarely need to go outside to move between buildings, which matters in rainy Tacoma winters.</p>
+      <p>The urban setting means Tacoma's cafes, museums, and arts scene are genuinely accessible — and Seattle is 35 miles north. For students who want a city as part of their education, this is a real asset. The tradeoff is density: there's no rolling countryside, no vast playing fields, no sense of remove from the outside world. The school partially mitigates this by partnering with adjacent Garfield Park and the Tacoma Lawn Tennis Club for outdoor space.</p>
+      <p>A major renovation wave since 2017 has significantly modernized the campus. A new all-weather James Memorial turf field was completed in 2017, a 26,000 sq ft academic building for the boys' upper school opened in 2019, and a new third gym and 25-yard underground pool were added the same year. Most recently (2023–2024), the former basement pool was transformed into creative arts studios — a recording studio, textile lab, dance studio, and music rehearsal room. A fitness center renovation is completing in 2025.</p>
+      <div class="facility-callout">
+        <strong>Recent investment highlight</strong>
+        $500,000 raised at the 2023 Crab Feed fundraiser for arts hub renovation; a seven-figure gift from the H.E. Anderson Foundation funded the new student lounge and middle school arts facilities.
+      </div>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Key campus facts</div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>10 acres in urban North Tacoma, on a bluff above Puget Sound</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Historic 1924 main building with connected facilities — no outdoor commute between classes</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>All-weather James Memorial turf field overlooking the bay (completed 2017)</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Brand-new boys academic building (2019) with labs, makerspaces, gym, and pool</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Walking distance to Tacoma's North End; 35 miles from Seattle</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Ongoing facility modernization; fitness center expansion completing 2025</span></div>
+      </div>
+    </div>
+    <div class="col-pane ma-tint ma">
+      <h3>One of America's great boarding school campuses</h3>
+      <p>Mercersburg's 300-acre rural campus in Franklin County, Pennsylvania is, without exaggeration, one of the most beautiful secondary school settings in the country. The campus has the feel of a small New England liberal arts college — stone buildings, a Gothic chapel that dominates the skyline, sweeping playing fields, tree-lined paths, and the quiet of the Appalachian highlands surrounding it. About 90 miles northwest of Washington D.C., the school is remote enough to create genuine immersion while remaining accessible by car.</p>
+      <p>The architectural centerpiece is the Chapel, designed by the firm Cram & Ferguson — the same architects responsible for Princeton's chapel — and it sets a tone of serious institutional purpose that permeates the whole campus. Seven student dormitories house the 81% boarding population, and the school's infrastructure is comprehensive: its own library, arts center, college counseling center, student center, dining hall, alumni center, and multiple dedicated athletic complexes. Students rarely need to leave the grounds and, during the week, largely don't.</p>
+      <p>The $453M endowment — one of the ten highest per-student at any independent secondary school in the U.S. — keeps everything in exceptional condition. Unlike many schools that struggle to fund facility maintenance, Mercersburg continually invests in its physical plant through donor gifts that are often fully covered by a single family, as with the recent $600K squash court renovation.</p>
+      <div class="facility-callout">
+        <strong>Notable campus landmark</strong>
+        The James Buchanan Cabin — believed to be the birthplace of the only U.S. president from Pennsylvania — was purchased by the school in 1953 and stands near Nolde Gymnasium on campus.
+      </div>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Key campus facts</div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>300 acres of rural Pennsylvania countryside — fields, woodland, historic stone buildings</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Gothic chapel designed by Cram & Ferguson (Princeton's chapel architects)</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Seven student dormitories; 81% of students live on campus full-time</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Fully self-contained: library, arts center, dining hall, student center, college counseling, alumni center</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>~90 miles from Washington D.C.; 150 miles from Philadelphia</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>$453M endowment funds continuous facility investment — no deferred maintenance</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FACILITIES ══════════════ -->
+<section class="section" id="facilities">
+  <div class="section-title-row">
+    <span class="section-num">02</span>
+    <h2>Facilities Deep Dive</h2>
+    <span class="winner-pill ma">Mercersburg wins</span>
+  </div>
+
+  <!-- PHOTO STRIP: FACILITIES -->
+  <div class="photo-grid">
+    <div class="photo-col">
+      <div class="photo-col-header aw-header">Annie Wright — Facilities</div>
+      <div class="photo-row">
+        <div class="photo-cell">
+          <img src="https://mithun.com/wp-content/uploads/2023/07/1720000_N31-1.jpg"
+               alt="Annie Wright academic building interior learning spaces">
+          <div class="cap">New Academic Building — multi-purpose gathering spaces (2019)</div>
+        </div>
+        <div class="photo-cell">
+          <img src="https://mithun.com/wp-content/uploads/2023/07/1720000_N33-1.jpg"
+               alt="Annie Wright building exterior detail">
+          <div class="cap">25-yard indoor pool and gymnasium added in 2019</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-col">
+      <div class="photo-col-header ma-header">Mercersburg — Facilities</div>
+      <div class="photo-row">
+        <div class="photo-cell">
+          <img src="https://www.dlrgroup.com/media/31_00000_09_N2_weblg-aspect-ratio-820-615.jpg"
+               alt="Mercersburg Hale Field House exterior">
+          <div class="cap">Hale Field House — 62,000 sq ft, largest in MAPL (LEED certified)</div>
+        </div>
+        <div class="photo-cell">
+          <img src="https://www.dlrgroup.com/media/31_00000_08_N7_weblg-aspect-ratio-820-615.jpg"
+               alt="Mercersburg aquatic center with spectators">
+          <div class="cap">Lloyd Aquatic Center — 500-seat bleachers, Olympic 50m pool</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MORE FACILITY PHOTOS -->
+  <div class="photo-grid">
+    <div class="photo-col">
+      <div class="photo-col-header aw-header">Annie Wright — Interior &amp; Facilities</div>
+      <div class="photo-row">
+        <div class="photo-cell">
+          <img src="https://mithun.com/wp-content/uploads/2023/07/1720000_N27-1.jpg"
+               alt="Annie Wright academic building interior">
+          <div class="cap">Flexible IB classrooms and shared learning spaces inside the NAB</div>
+        </div>
+        <div class="photo-cell">
+          <img src="https://mithun.com/wp-content/uploads/2023/07/1720000_N30-1.jpg"
+               alt="Annie Wright makerspace lab">
+          <div class="cap">Innovation lab and makerspace — science and design integration</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-col">
+      <div class="photo-col-header ma-header">Mercersburg — Athletics Complex</div>
+      <div class="photo-row">
+        <div class="photo-cell">
+          <img src="https://www.dlrgroup.com/media/31_00000_08_weblg-aspect-ratio-820-615.jpg"
+               alt="Mercersburg Lloyd Aquatic Center pool">
+          <div class="cap">Lloyd Aquatic Center — Olympic 50-meter, 10-lane pool</div>
+        </div>
+        <div class="photo-cell">
+          <img src="https://www.dlrgroup.com/media/31_00000_09_N10_weblg-1-aspect-ratio-820-615.jpg"
+               alt="Mercersburg Hale Fieldhouse basketball courts">
+          <div class="cap">Hale Field House — 62,000 sq ft, largest fieldhouse in MAPL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTS & SQUASH PHOTOS -->
+  <div class="photo-grid">
+    <div class="photo-col">
+      <div class="photo-col-header aw-header">Annie Wright — More Facilities</div>
+      <div class="photo-row">
+        <div class="photo-cell">
+          <img src="https://mithun.com/wp-content/uploads/2023/07/1720000_N28-1.jpg"
+               alt="Annie Wright outdoor spaces">
+          <div class="cap">Connected outdoor instruction and gathering spaces</div>
+        </div>
+        <div class="photo-cell">
+          <img src="https://mithun.com/wp-content/uploads/2023/07/1720000_N29-1.jpg"
+               alt="Annie Wright building detail">
+          <div class="cap">Material palette echoes the 1924 historic main building</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-col">
+      <div class="photo-col-header ma-header">Mercersburg — Squash &amp; Gym</div>
+      <div class="photo-row">
+        <div class="photo-cell">
+          <img src="https://www.dlrgroup.com/media/31_00000_10_weblg-aspect-ratio-820-615.jpg"
+               alt="Mercersburg Davenport Squash Center courts">
+          <div class="cap">Davenport Squash Center — 10 ASB courts, refurbished 2025</div>
+        </div>
+        <div class="photo-cell">
+          <img src="https://www.dlrgroup.com/media/31_00000_11_weblg-aspect-ratio-820-615-1536x1152.jpg"
+               alt="Mercersburg Nolde Gymnasium weight room">
+          <div class="cap">Nolde Gymnasium — fitness center, climbing wall, aerobics studio</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="col-pane aw-tint aw">
+      <h3>Academic spaces</h3>
+      <p>The 2019 Boys Academic Building is the most significant facility addition in Annie Wright's recent history. Designed by Seattle firm Mithun, the 26,000 sq ft three-story structure houses advanced science laboratories, flexible IB-oriented classrooms, a design and makerspace, and connects to the new gym and pool. It's a genuinely contemporary building — high-performance envelope, daylight harvesting, natural ventilation, outdoor learning spaces — and it reflects the school's commitment to a modern learning environment rather than resting on historical charm alone.</p>
+      <h3>Athletics facilities</h3>
+      <p>Annie Wright has three gyms: the original Kemper Gym (freshly renovated with new court surfaces), a second gym, and the new 2019 facility with its own basketball court. The 25-yard Barbey-Murray underground pool opened in 2019. A major 2025 fitness center expansion adds a triple-sized athletic training room, updated locker rooms, a cutting-edge weight room, a multipurpose studio, and separate student and faculty fitness rooms. For a school of 370 upper school students on 10 acres, the facility provision is genuinely impressive.</p>
+      <h3>Arts spaces</h3>
+      <p>The Kemper Theatre is a 350-seat proscenium-style venue — professional-quality for student productions. Music practice rooms support individual and group lessons. In 2023–2024, the former basement pool space became a recording studio, textile lab, dance studio, and music and theatre rehearsal room — a creative arts hub that reflects real investment in the performing arts, not just a multipurpose room.</p>
+      <h3>Boarding facilities</h3>
+      <p>The dorms are accessed directly from the main building, meaning boarding students can move between living quarters, classrooms, dining, and the gym without stepping outside. Rooms are described as spacious and comfortable with natural light. Students share kitchen facilities, media lounges, and study rooms within the dorm wing.</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Facility highlights</div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>26,000 sq ft modern academic building (2019) with labs and makerspaces</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>25-yard indoor pool + 3 gyms — all connected to main building</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>350-seat Kemper Theatre for professional-level productions</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Recording studio, textile lab, dance studio added 2023–24</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>New weight room, triple-sized training room, wellness center (2025)</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>All-weather James Memorial turf field with bay views</span></div>
+      </div>
+    </div>
+    <div class="col-pane ma-tint ma">
+      <h3>The Goldthorpe Athletic Complex</h3>
+      <p>Mercersburg's athletic facilities are in a different league from most prep schools. The Goldthorpe Athletic Complex is 209,000 square feet of indoor athletic and training space — to put that in perspective, that's more square footage than many Division III college athletic centers. It contains: Nolde Gymnasium (three full basketball courts, wrestling center, climbing wall, aerobics studio, fitness center), the Lloyd Aquatic Center (Olympic 50-meter, 10-lane pool with diving well; seating for 500 spectators), the Hale Field House (62,000 sq ft — the largest indoor fieldhouse in the Mid-Atlantic Prep League, housing a 200-meter competition track with 6 turn lanes and 8 sprint lanes), and the Davenport Squash Center (10 state-of-the-art ASB courts with live-streaming and performance analytics, fully refurbished in 2025 for ~$600K).</p>
+      <h3>Outdoor athletic facilities</h3>
+      <p>Ten grass playing fields cover baseball, field hockey, lacrosse (boys and girls), soccer (boys and girls), and softball. Regents' Field provides a synthetic turf surface for field hockey and lacrosse. Cannon Field is the varsity baseball facility with covered dugouts, warm-up areas, and a scoreboard. The Smoyer Tennis Center handles tennis. The sheer scale and quality of the outdoor athletic infrastructure is remarkable for a school of 450 students.</p>
+      <h3>The Burgin Center for the Arts</h3>
+      <p>The Burgin Center opened in 2006 (with Benicio del Toro attending the grand opening) and provides dedicated, purpose-built space for the school's performing and fine arts programs. The Simon Theatre is the primary performance venue. The arts center houses the Stony Batter Players drama program — founded in 1899 — as well as the school's nine music, dance, and theatre ensembles.</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Facility highlights</div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Goldthorpe Athletic Complex: 209,000 sq ft — gymnasium, pool, fieldhouse, squash, track</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Lloyd Aquatic Center: Olympic 50-meter, 10-lane pool; produced 24+ Olympians in swimming</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Hale Field House: 62,000 sq ft — largest indoor fieldhouse in MAPL; 200-meter competition track</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Davenport Squash Center: 10 ASB courts with live-streaming + performance analytics (refurbished 2025)</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>10 grass playing fields + synthetic turf surface + baseball stadium with scoreboard</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Burgin Center for the Arts: dedicated performing arts building, Simon Theatre</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Seven dormitories; all air-conditioned with carpeted hallways and private showers</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ACADEMICS ══════════════ -->
+<section class="section" id="academics">
+  <div class="section-title-row">
+    <span class="section-num">03</span>
+    <h2>Academics</h2>
+    <span class="winner-pill tie">Depends on the student</span>
+  </div>
+  <div class="two-col">
+    <div class="col-pane aw-tint aw">
+      <h3>The IB framework — a distinctive academic identity</h3>
+      <p>Annie Wright's commitment to the International Baccalaureate curriculum is the defining academic fact about the school. It's the only institution in Washington state offering the full IB continuum from preschool through Grade 12, which means students arrive at the upper school already versed in the IB's philosophy — inquiry-based, internationally minded, assessment-driven rather than test-driven. The Diploma Programme in Grades 11–12 is respected worldwide, not just in U.S. college admissions, and it particularly opens doors at universities in Canada, the UK, and Europe.</p>
+      <p>The IB DP structure is deliberately balanced: students must take subjects from six groups (language, second language, individuals and societies, sciences, mathematics, arts), write a 4,000-word Extended Essay on a topic of their choice, complete a Theory of Knowledge course, and fulfill a Creativity, Activity, Service (CAS) requirement. This is a rigorous, holistic framework that rewards students who think across disciplines and write well.</p>
+      <p>The tradeoff is less menu flexibility. Students on the full diploma track follow a prescribed structure with limited room to pursue hyper-specialized electives. The school's 8:1 ratio and average class size of 11 mean individual attention is strong. Average ACT score of 34 ranks Annie Wright among the top 20 boarding schools nationally on standardized test performance.</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Academic key facts</div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Only full IB continuum school in Washington state (Pre-K through Grade 12)</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>IB DP diploma opens doors at UK, Canadian, and European universities</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>~8:1 student-teacher ratio; average class size of 11 students</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Average ACT score of 34 — top 20 nationally among boarding schools</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>74% of faculty hold master's degrees or above</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>~22% of graduates go to top-25 U.S. universities</span></div>
+      </div>
+    </div>
+    <div class="col-pane ma-tint ma">
+      <h3>Breadth, depth, and an extraordinary faculty ratio</h3>
+      <p>Mercersburg's academic model is the traditional elite college-prep approach, executed at a very high level. With 150+ courses and 40+ honors/advanced studies offerings, students have genuine latitude to pursue interests deeply. The 4:1 student-faculty ratio is the headline number — among the very best at any boarding school in the country, rivaling schools with far larger endowments. In practice, this means small seminars, real faculty mentorship, and the kind of one-on-one academic relationships that transform students.</p>
+      <p>The school's curriculum includes two senior capstone programs that give students real research and project experience before college, which bridges the gap between high school academic work and genuine intellectual independence. A robotics program, global travel opportunities, and 30+ student clubs round out the intellectual life. Faculty have dedicated their careers to working with teenagers; the depth of their investment is regularly cited by alumni as the defining feature of the Mercersburg experience.</p>
+      <p>College placement is exceptional: approximately 68% of recent graduates gained admission to a top-50 national university or liberal arts college, and 20–25% of each graduating class is recruited for college athletics. The school competes in the Mid-Atlantic Prep League alongside Blair, Hill, Lawrenceville, and Peddie — academically rigorous peer institutions.</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Academic key facts</div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>4:1 student-faculty ratio — among the best at any U.S. boarding school</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>150+ courses including 40+ honors and advanced studies offerings</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Two senior capstone programs for independent research and project work</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>68% of graduates admitted to a top-50 U.S. university or liberal arts college</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>20–25% of each graduating class recruited for college athletics</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>MAPL membership — academic and athletic competition with top-tier peer schools</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BOARDING ══════════════ -->
+<section class="section" id="boarding">
+  <div class="section-title-row">
+    <span class="section-num">04</span>
+    <h2>Boarding Life &amp; Community</h2>
+    <span class="winner-pill ma">Mercersburg wins</span>
+  </div>
+  <div class="two-col">
+    <div class="col-pane aw-tint aw">
+      <h3>Flexible boarding with real community roots</h3>
+      <p>Annie Wright's approach to boarding is deliberately flexible and community-integrated, which sets it apart from traditional boarding schools. Students choose between 5-day boarding (going home Friday after school, returning Sunday evening) or 7-day residential. About half the upper school boards; the other half commutes as day students. This means the school has genuine roots in the Tacoma community and isn't a closed-off world.</p>
+      <p>The boarding program is structured around dorm groups of 16–17 students, each with one or two prefects and a live-in dorm parent. Eight residential faculty oversee the full program, and the stated mission explicitly balances academics, wellness, and character. Boarders live within the main building — the same building as their classrooms and dining hall — creating a genuinely tight-knit residential experience despite the urban setting. Weekend activities range from outdoor adventure to movie nights and community events.</p>
+      <p>International students represent 26% of the school, and the 5-day option is explicitly available to domestic students while international students requiring F-1 visas enroll in the 7-day program. For families looking for an accessible, lower-commitment entry into boarding school, Annie Wright's structure is genuinely appealing.</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Boarding life key facts</div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>5-day or 7-day boarding options — rare flexibility among boarding schools</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Dorm groups of 16–17 students with live-in dorm parents</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Dorms integrated directly into the main building — no outdoor commute</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>~50% boarding / 50% day student mix — urban community integration</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>26% international students from around the world</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Weekend programming: outdoor adventures, arts events, city trips</span></div>
+      </div>
+    </div>
+    <div class="col-pane ma-tint ma">
+      <h3>Total immersion — this is what boarding school means</h3>
+      <p>At Mercersburg, boarding isn't an option — it's the identity of the school. With 81% of students living on campus, the community is fully residential in character. The rural location ensures genuine immersion; there's no slipping off to the suburbs for the weekend. The result is the kind of total community formation that boarding school advocates describe: shared traditions, deep faculty relationships, lifelong friendships forged in close proximity, and a student who graduates having navigated five years of genuine independence within a structured environment.</p>
+      <p>Seven dormitories house students by grade and gender, with faculty and their families living on campus in faculty housing. The "family feel" described by alumni isn't marketing language — it reflects a reality where students see the same faculty member in class, at dinner, and coaching the JV lacrosse team. When Benicio del Toro returned to campus in April 2025, he addressed students over dinner and screened a film in the theatre. That kind of sustained institutional relationship with alumni is only possible in a boarding community this tightly woven.</p>
+      <p>Traditions run deep: Step Songs (an annual pep rally tradition where students gather on the steps of Main Hall to sing school songs for visiting alumni) dates back to the early 1900s. Alumni Weekend draws graduates back every fall, and the alumni network is described by families as impressively active and genuinely useful after graduation.</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Boarding life key facts</div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>81% of students board — a true residential community, not a hybrid</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Seven dormitories; faculty live on campus with their families</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>50% boys / 50% girls; 22% international; students from 28 states and 31 countries</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Deep, century-old traditions — Step Songs, Alumni Weekend, school cheers</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Rural location enforces immersion — genuine separation from home life</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Alumni network described as exceptionally active and professionally valuable</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ATHLETICS ══════════════ -->
+<section class="section" id="athletics">
+  <div class="section-title-row">
+    <span class="section-num">05</span>
+    <h2>Athletics &amp; Outdoor Programs</h2>
+    <span class="winner-pill ma">Mercersburg wins</span>
+  </div>
+  <div class="two-col">
+    <div class="col-pane aw-tint aw">
+      <h3>GOAT program: the Pacific Northwest as classroom</h3>
+      <p>Annie Wright competes as a 1A school in the Nisqually League — a smaller competitive division appropriate for a school of 370 upper school students on a 10-acre campus. The school offers 10 interscholastic sports including basketball, soccer, football (a relatively unusual offering for a small private school), volleyball, tennis, golf, and track. The school's athletic program has expanded meaningfully with the 2019 gym and pool additions, and the 2025 fitness center upgrade further raises the standard.</p>
+      <p>The genuine differentiator at Annie Wright isn't varsity competition — it's the GOAT (Great Outdoor Adventure Team) program. The Pacific Northwest is one of the most geographically spectacular places on earth, and the GOAT program uses it deliberately: students summit Mt. St. Helens, white-water raft Pacific Northwest rivers, rock climb, kayak on Puget Sound, and explore Mount Rainier and Olympic National Parks. Students earn certificates along the way, and the program runs through the academic year, not just as occasional field trips. For a student who came to Annie Wright partly for the PNW setting, GOAT is a genuine selling point.</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Athletics key facts</div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>10 interscholastic sports; WIAA 1A Nisqually League competition</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>GOAT outdoor program: Mt. St. Helens, Rainier, Olympic NP, white-water rafting, rock climbing</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>25-yard indoor pool (2019), 3 gyms, all-weather turf field</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>New 2025 fitness center: weight room, training room, multipurpose studio</span></div>
+      </div>
+    </div>
+    <div class="col-pane ma-tint ma">
+      <h3>29 sports, 24 Olympians, best-in-class facilities</h3>
+      <p>Mercersburg's athletic program is one of the strongest at any boarding school in the country. The 29 interscholastic sports span the full range from traditional (baseball, football, lacrosse, soccer, basketball, swimming, tennis, golf) to competitive niche sports (squash, wrestling, field hockey, diving, cross country) to adventure sports (climbing, kayaking, mountain biking, skiing, snowboarding, cycling). The school competes in the Mid-Atlantic Prep League — one of the most competitive prep school leagues in the country — against institutions like Blair Academy, The Hill School, Lawrenceville, Peddie, and Hun School.</p>
+      <p>The swimming program has produced more than two dozen Olympians, anchored by the Lloyd Aquatic Center's Olympic 50-meter pool. The squash program is nationally prominent: the Davenport Center's 10 courts (just refurbished in 2025 for ~$600K) are considered one of the best high school squash facilities on the East Coast, and the boys' program has won the MAPL squash championship multiple years running. Typically 20–25% of each graduating class is recruited for college athletics — an exceptional placement rate.</p>
+      <p>The outdoor education program — skiing, mountain biking, climbing, kayaking — mirrors Annie Wright's GOAT in spirit, but within a different geographic context (the Appalachians and mid-Atlantic rather than the Cascades).</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Athletics key facts</div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>29 interscholastic sports — most at any school in the MAPL</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>MAPL competition (Blair, Hill, Lawrenceville, Peddie, Hun School)</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Lloyd Aquatic Center: Olympic 50-meter pool; 24+ Olympic alumni in swimming</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Davenport Squash Center: 10 courts, refurbished 2025, considered best high school squash facility on East Coast</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>62,000 sq ft Hale Field House — largest indoor fieldhouse in MAPL; 200-meter track</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>20–25% of graduates recruited for college athletics annually</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ARTS ══════════════ -->
+<section class="section" id="arts">
+  <div class="section-title-row">
+    <span class="section-num">06</span>
+    <h2>Arts &amp; Performance</h2>
+    <span class="winner-pill tie">Strong at both — edge to Mercersburg</span>
+  </div>
+  <div class="two-col">
+    <div class="col-pane aw-tint aw">
+      <p>Arts at Annie Wright benefit from being embedded in the IB curriculum, not bolted on as extracurriculars. Visual arts, music, and theatre carry academic weight and are part of the Diploma Programme's assessment structure. This means arts students are evaluated with the same rigor as science students, and the skills developed (critical analysis, extended commentary, exhibition) transfer well to college arts programs.</p>
+      <p>The school runs three full productions per year (all-school, upper school, and middle/lower school), and extracurricular offerings are surprisingly broad for a school of this size: music production, theatre tech, improv comedy, textiles, orchestra (including zero-period orchestra for early risers), and a 350-seat Kemper Theatre to perform in. The 2023–24 arts hub expansion added a recording studio, textile lab, and dedicated dance and rehearsal spaces — a significant investment in creative infrastructure.</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Arts highlights</div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Arts embedded in IB curriculum — academic assessment, not just extracurricular</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>3 full productions/year; 350-seat Kemper Theatre proscenium stage</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Recording studio, textile lab, dance studio added 2023–24</span></div>
+        <div class="bullet"><span class="bullet-icon aw-icon">✓</span><span>Improv comedy, music production, theatre tech, orchestras</span></div>
+      </div>
+    </div>
+    <div class="col-pane ma-tint ma">
+      <p>Mercersburg's performing arts tradition begins in 1899 with the founding of Stony Batter Players — the oldest continually active student organization on campus. The lineage is extraordinary: Jimmy Stewart '28 performed in Stony Batter before going on to win the Academy Award for Best Actor, and Benicio del Toro '85 won the Academy Award for Best Supporting Actor for Traffic. Grammy-nominated record producer Luke Ebbin is also an alum. This isn't historical trivia; it reflects a school that has genuinely produced world-class artistic talent, and that tradition shapes the culture today.</p>
+      <p>The Burgin Center for the Arts opened in 2006 providing a purpose-built home for the school's nine music, dance, and theatre ensembles. The Simon Theatre is the primary performance venue. Visual arts, music, and theatre are all staffed by dedicated faculty, and the scale of the arts program — nine ensembles — is remarkable for a school of 450 students. Fine arts, ceramics, photography, and digital media round out the visual arts offerings.</p>
+      <div class="key-bullets">
+        <div class="key-bullets-label">Arts highlights</div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Stony Batter Players — founded 1899; produced two Academy Award winners</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Nine music, dance, and theatre ensembles for 450 students</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Burgin Center for the Arts — dedicated 2006 building with Simon Theatre</span></div>
+        <div class="bullet"><span class="bullet-icon ma-icon">✓</span><span>Notable alumni: Jimmy Stewart '28, Benicio del Toro '85, Luke Ebbin (Grammy-nominated producer)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FINANCIALS ══════════════ -->
+<section class="section" id="financials">
+  <div class="section-title-row">
+    <span class="section-num">07</span>
+    <h2>Tuition, Aid &amp; Endowment</h2>
+    <span class="winner-pill ma">Mercersburg wins</span>
+  </div>
+  <div class="two-col">
+    <div class="col-pane aw-tint aw">
+      <p>Annie Wright's 2025–26 boarding tuition of $81,085 is actually slightly higher than Mercersburg's, which is notable given the difference in institutional scale and endowment. The school offers need-based financial aid through the Clarity Application platform, and rolling admissions means families who miss the January 24 deadline can still apply and receive aid consideration. The school's $36 million endowment, while not insignificant for a school of its size, limits the depth of aid available compared to larger-endowed institutions.</p>
+      <p>For families who need substantial financial assistance, Annie Wright's aid program may be more constrained than peer schools. The school does not publicly disclose the percentage of students receiving aid or the total aid budget. Day tuition at $37,520 offers a considerably lower entry point for local Tacoma families, and the flexible 5-day boarding option creates a middle ground for families who want some of the boarding experience at lower cost.</p>
+      <div class="stat-row">
+        <span class="stat-tag aw-tag">$81,085 boarding 2025–26</span>
+        <span class="stat-tag aw-tag">$37,520 day</span>
+        <span class="stat-tag aw-tag">$36M endowment</span>
+        <span class="stat-tag aw-tag">Rolling admissions</span>
+      </div>
+    </div>
+    <div class="col-pane ma-tint ma">
+      <p>Mercersburg's financial aid story is genuinely exceptional. The $453 million endowment funds a program that reaches approximately half of all enrolled families — double the typical boarding school average of ~30%. Last year the school awarded nearly $12 million in aid, ranging from a few thousand dollars to full tuition remission based on demonstrated need. The school's stated goal is to never let financial barriers prevent a gifted student from attending.</p>
+      <p>Named scholarships include the Legacy Scholar (full boarding tuition for children/grandchildren of alumni), the Preparatory Scholar (full tuition for outstanding day students), and the 1893 Scholar (awarded from the general applicant pool for exceptional citizenship). Access Scholarships specifically target gifted students from underrepresented backgrounds. For families who might assume a school at this price point is out of reach, the reality is that Mercersburg may be more affordable than it appears — and for exceptional students, potentially free.</p>
+      <div class="stat-row">
+        <span class="stat-tag ma-tag">$78,900 boarding 2025–26</span>
+        <span class="stat-tag ma-tag">$50,800 day</span>
+        <span class="stat-tag ma-tag">$453M endowment</span>
+        <span class="stat-tag ma-tag">~$12M annual aid</span>
+        <span class="stat-tag ma-tag">50% receive aid</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ALUMNI ══════════════ -->
+<section class="alumni-section" id="alumni">
+  <div class="section-title-row">
+    <span class="section-num">08</span>
+    <h2>Notable Alumni</h2>
+    <span class="winner-pill ma">Mercersburg wins on star power</span>
+  </div>
+  <div class="alumni-grid">
+    <div class="alumni-col">
+      <div class="alumni-col-label aw-col-label">Annie Wright Schools</div>
+      <div class="alumni-card">
+        <div class="alumni-header">
+          <span class="alumni-name">Mary McCarthy</span>
+          <span class="alumni-year aw-year">Class of 1929</span>
+        </div>
+        <div class="alumni-title">Author &amp; Literary Critic</div>
+        <div class="alumni-bio">One of the most important American writers of the 20th century — novelist, memoirist, and sharp cultural critic. McCarthy graduated as Annie Wright's class valedictorian before attending Vassar. She later wrote about her time at the school in two memoirs, <em>Memories of a Catholic Girlhood</em> and <em>How I Grew</em>, describing finding her two most important intellectual mentors there. Her novels include <em>The Group</em> (1963), a landmark of feminist fiction.</div>
+      </div>
+      <div class="alumni-card">
+        <div class="alumni-header">
+          <span class="alumni-name">Eloise Mumford</span>
+          <span class="alumni-year aw-year">Attended Annie Wright</span>
+        </div>
+        <div class="alumni-title">Actress</div>
+        <div class="alumni-bio">American actress known for the <em>Fifty Shades of Grey</em> film trilogy, the TV series <em>The Right Stuff</em>, <em>Lone Star</em>, and <em>The River</em>. Born and raised in Olympia, Washington, Mumford attended Annie Wright in Tacoma before pursuing acting. She was inspired to perform after seeing a local production of <em>South Pacific</em> at age seven.</div>
+      </div>
+      <div class="alumni-card">
+        <div class="alumni-header">
+          <span class="alumni-name">Betty Garrett-Parks</span>
+          <span class="alumni-year aw-year">Class of 1936</span>
+        </div>
+        <div class="alumni-title">Broadway Star &amp; Film Actress</div>
+        <div class="alumni-bio">Broadway and Hollywood actress who starred alongside Gene Kelly and Frank Sinatra in the MGM musical <em>On the Town</em> (1949). A beloved figure in mid-century American entertainment.</div>
+      </div>
+      <div class="alumni-card">
+        <div class="alumni-header">
+          <span class="alumni-name">Merrill Wagner</span>
+          <span class="alumni-year aw-year">Class of 1953</span>
+        </div>
+        <div class="alumni-title">Visual Artist</div>
+        <div class="alumni-bio">Prominent American painter and sculptor whose work is held in major museum collections across the United States. Known for large-scale paintings on non-traditional surfaces including slate and steel.</div>
+      </div>
+    </div>
+    <div class="alumni-col">
+      <div class="alumni-col-label ma-col-label">Mercersburg Academy</div>
+      <div class="alumni-card">
+        <div class="alumni-header">
+          <span class="alumni-name">Jimmy Stewart</span>
+          <span class="alumni-year ma-year">Class of 1928</span>
+        </div>
+        <div class="alumni-title">Academy Award–Winning Actor &amp; Brigadier General</div>
+        <div class="alumni-bio">One of the most celebrated actors in Hollywood history. Performed in Stony Batter Players at Mercersburg before going on to Princeton and Hollywood. Won the Academy Award for Best Actor for <em>The Philadelphia Story</em> (1940); his most iconic role was George Bailey in <em>It's a Wonderful Life</em> (1946). Separately decorated as a Brigadier General in the U.S. Army Air Corps in World War II, flying numerous combat missions.</div>
+      </div>
+      <div class="alumni-card">
+        <div class="alumni-header">
+          <span class="alumni-name">Benicio del Toro</span>
+          <span class="alumni-year ma-year">Class of 1985</span>
+        </div>
+        <div class="alumni-title">Academy Award–Winning Actor</div>
+        <div class="alumni-bio">Puerto Rican-born actor; won the Academy Award for Best Supporting Actor for <em>Traffic</em> (2000), plus the Golden Globe, SAG Award, BAFTA, and Silver Bear. Won the Palme d'Or at Cannes for his portrayal of Che Guevara. Also known for <em>The Usual Suspects</em>, <em>Fear and Loathing in Las Vegas</em>, <em>Sicario</em>, and the Marvel Cinematic Universe. Family connections to Mercersburg span multiple generations; he visited campus in April 2025, received the Alumni Council Medal for Distinguished Achievement, and told current students: "Have fun, and if you have to take the road, you don't have to take the main road."</div>
+      </div>
+      <div class="alumni-card">
+        <div class="alumni-header">
+          <span class="alumni-name">Mel Stewart</span>
+          <span class="alumni-year ma-year">Class of 1988</span>
+        </div>
+        <div class="alumni-title">Olympic Gold Medalist, Swimming</div>
+        <div class="alumni-bio">Won gold in the 200m butterfly and the 4×100m medley relay at the 1992 Barcelona Olympics. One of more than two dozen Olympic-level swimmers produced by Mercersburg's swimming program.</div>
+      </div>
+      <div class="alumni-card">
+        <div class="alumni-header">
+          <span class="alumni-name">H.F. "Gerry" Lenfest</span>
+          <span class="alumni-year ma-year">Class of 1949</span>
+        </div>
+        <div class="alumni-title">Cable TV Mogul &amp; Philanthropist</div>
+        <div class="alumni-bio">Built one of the largest cable TV companies in the United States; donated $35 million to Mercersburg in 2000 and established the Legacy Scholar full-tuition award. His philanthropic legacy extends to cultural institutions across Philadelphia, including the Philadelphia Inquirer.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FIT SECTION ══════════════ -->
+<section id="fit">
+  <div class="fit-section">
+    <div class="fit-section-header">
+      <div class="eyebrow">Student Fit Analysis</div>
+      <h2>Who is each school right for?</h2>
+      <p>Two strong schools, two different students. Here's how to think about fit.</p>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-card aw">
+        <div class="fit-card-label">Annie Wright Schools</div>
+        <h3>Choose Annie Wright if your student…</h3>
+        <div class="fit-item"><span class="fit-dot"></span><span>Wants the IB diploma — a globally recognized credential that opens university doors in the UK, Canada, and Europe, not just the U.S.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Thrives in an urban setting and sees the Pacific Northwest — mountains, Puget Sound, Seattle — as part of the educational experience, not an inconvenience.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Is ready for boarding but whose family wants the 5-day option, or who lives within regional distance and values community connection to Tacoma.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Is a strong but not elite-competitive applicant who would be shut out by the 22% acceptance rate at schools like Mercersburg — Annie Wright's rolling, 68% acceptance rate offers a genuine rigorous option.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Is genuinely excited by outdoor adventure as part of their education — summiting volcanoes and rafting rivers isn't a field trip here, it's a program.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Benefits from the single-gender upper school structure (separate boys and girls programs sharing a coed community) — rare at any price point.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Has a family with roots in the Pacific Northwest and wants a school that will build a lifelong community in that region.</span></div>
+        <div class="not-right">
+          <div class="not-right-label">May not be the right fit if…</div>
+          <div class="fit-item dim"><span class="fit-dot"></span><span>The student wants the full, immersive 7-day boarding experience in a predominantly boarding community.</span></div>
+          <div class="fit-item dim"><span class="fit-dot"></span><span>The student is a serious multi-sport athlete who needs elite competition and world-class athletic infrastructure.</span></div>
+          <div class="fit-item dim"><span class="fit-dot"></span><span>The family needs significant financial aid — the $36M endowment limits aid depth compared to Mercersburg.</span></div>
+        </div>
+      </div>
+      <div class="fit-card ma">
+        <div class="fit-card-label">Mercersburg Academy</div>
+        <h3>Choose Mercersburg if your student…</h3>
+        <div class="fit-item"><span class="fit-dot"></span><span>Wants the full boarding school experience — 81% of students live on campus, deep traditions, lifelong friendships forged in genuine immersion.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Is a serious athlete in any of 29 sports — especially swimming, squash, lacrosse, or track — who wants elite competition and Olympic-quality facilities.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Needs substantial financial aid — the $453M endowment means 50% of families receive help, and exceptional students can attend on full scholarship.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Is academically exceptional and competitive — can hold their own against the 22% acceptance rate and thrive among MAPL-level peers.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Has performing arts ambitions and wants to train in a tradition that produced two Academy Award winners, with nine ensembles and a purpose-built arts center.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Wants the East Coast establishment network — MAPL membership, alumni connections in finance, law, medicine, politics, and entertainment.</span></div>
+        <div class="fit-item"><span class="fit-dot"></span><span>Thrives in a rural, self-contained environment where the campus is the world and distractions are minimized by geography.</span></div>
+        <div class="not-right">
+          <div class="not-right-label">May not be the right fit if…</div>
+          <div class="fit-item dim"><span class="fit-dot"></span><span>The student wants urban access, the Pacific Northwest, or to stay connected to a specific region during school.</span></div>
+          <div class="fit-item dim"><span class="fit-dot"></span><span>The student specifically wants an IB diploma for international university applications.</span></div>
+          <div class="fit-item dim"><span class="fit-dot"></span><span>A 22% acceptance rate is a realistic barrier — the student would need to be genuinely competitive.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SCORECARD ══════════════ -->
+<section id="scorecard">
+  <div class="scorecard">
+    <div class="scorecard-header">
+      <h2>Category Scorecard</h2>
+      <p>Winner highlighted in each row · Tie = no clear winner</p>
+    </div>
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th style="text-align:right">Annie Wright</th>
+          <th>Category</th>
+          <th style="text-align:left">Mercersburg</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="win-ma">
+          <td class="aw-val">10 acres · urban · bay views</td>
+          <td class="category">Campus <span class="score-tag">MA</span></td>
+          <td class="ma-val">300 acres · Gothic chapel · rural PA</td>
+        </tr>
+        <tr class="win-ma">
+          <td class="aw-val">3 gyms · 25-yd pool · new NAB · 350-seat theatre</td>
+          <td class="category">Facilities <span class="score-tag">MA</span></td>
+          <td class="ma-val">209K sq ft complex · Olympic pool · 62K sqft fieldhouse · 10 squash courts</td>
+        </tr>
+        <tr class="win-tie">
+          <td class="aw-val">Full IB Pre-K–12 · 8:1 ratio · ACT avg 34</td>
+          <td class="category">Academics <span class="score-tag">Tie</span></td>
+          <td class="ma-val">150+ courses · 4:1 ratio · 68% top-50 placement</td>
+        </tr>
+        <tr class="win-ma">
+          <td class="aw-val">~50% boarding · 5- or 7-day · flexible</td>
+          <td class="category">Boarding life <span class="score-tag">MA</span></td>
+          <td class="ma-val">81% boarding · total immersion · deep traditions</td>
+        </tr>
+        <tr class="win-ma">
+          <td class="aw-val">10 sports · GOAT program · 1A Nisqually</td>
+          <td class="category">Athletics <span class="score-tag">MA</span></td>
+          <td class="ma-val">29 sports · MAPL · 24 Olympic swimmers · 20–25% recruited</td>
+        </tr>
+        <tr class="win-tie">
+          <td class="aw-val">IB arts credit · recording studio · Kemper Theatre</td>
+          <td class="category">Arts <span class="score-tag">Tie</span></td>
+          <td class="ma-val">Stony Batter 1899 · 2 Oscar winners · 9 ensembles</td>
+        </tr>
+        <tr class="win-ma">
+          <td class="aw-val">$36M endowment · rolling admissions</td>
+          <td class="category">Financial aid <span class="score-tag">MA</span></td>
+          <td class="ma-val">$453M endowment · $12M aid · 50% receive aid</td>
+        </tr>
+        <tr class="win-aw">
+          <td class="aw-val">~68% acceptance rate · rolling</td>
+          <td class="category">Accessibility <span class="score-tag">AW</span></td>
+          <td class="ma-val">~22% acceptance rate · Jan 15 deadline</td>
+        </tr>
+        <tr class="win-ma">
+          <td class="aw-val">Mary McCarthy · Eloise Mumford · Betty Garrett</td>
+          <td class="category">Alumni prestige <span class="score-tag">MA</span></td>
+          <td class="ma-val">Jimmy Stewart · Benicio del Toro · Mel Stewart '92 Olympics</td>
+        </tr>
+        <tr class="win-aw">
+          <td class="aw-val">Pacific NW · Puget Sound · Seattle nearby · GOAT</td>
+          <td class="category">Location/lifestyle <span class="score-tag">AW</span></td>
+          <td class="ma-val">Rural Appalachian · immersive · near D.C.</td>
+        </tr>
+        <tr class="win-aw">
+          <td class="aw-val">IB opens UK/Canada/Europe doors</td>
+          <td class="category">Global curriculum <span class="score-tag">AW</span></td>
+          <td class="ma-val">Traditional college prep · U.S.-focused placement</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="footer">
+  Data current as of 2025–2026 academic year · Sources: school websites, Wikipedia, BoardingSchoolReview.com, DLR Group, Mithun Architects, SwimSwam, Mercersburg Academy news, Annie Wright Schools news releases
+</div>
+<script>
+  document.querySelectorAll('.photo-cell img').forEach(img => {
+    img.addEventListener('error', function() {
+      this.style.display = 'none';
+      const cell = this.closest('.photo-cell');
+      const cap = cell.querySelector('.cap');
+      cell.style.background = 'linear-gradient(135deg, #d8d5d0, #c8c5c0)';
+      cell.style.display = 'flex';
+      cell.style.alignItems = 'center';
+      cell.style.justifyContent = 'center';
+      const ph = document.createElement('div');
+      ph.style.cssText = 'color:#888;font-size:12px;text-align:center;padding:16px;z-index:2;position:relative;';
+      ph.textContent = cap ? cap.textContent : 'Photo unavailable';
+      cell.insertBefore(ph, cap);
+    });
+  });
+</script>
+
+</body>
+</html>
